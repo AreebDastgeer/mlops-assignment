@@ -6,7 +6,7 @@ import os
 dataset_path = "data/dataset.csv"
 
 if os.path.exists(dataset_path):
-    df = pd.read_csv(dataset_path)
+    df = pd.read_csv("data/dataset.csv", sep="\t")  # tab-separated
     print("Dataset loaded")
 
     # Prepare features and labels
