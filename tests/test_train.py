@@ -12,7 +12,7 @@ def load_dataset():
     """Load dataset if it exists, skip tests otherwise."""
     if not os.path.exists(DATA_PATH):
         pytest.skip("Dataset not found. Make sure DVC pull ran before tests.")
-    df = pd.read_csv(DATA_PATH)
+    df = pd.read_csv(DATA_PATH, sep="\t")
     return df
 
 def test_data_loading(load_dataset):
